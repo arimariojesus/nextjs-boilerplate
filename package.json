@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ./src/**/*.{ts,tsx}"
+    "lint": "eslint ./src --ext ts,tsx",
+    "lint:fix": "yarn lint --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn lint:fix"
+    ]
   },
   "dependencies": {
     "@next/font": "13.1.1",
