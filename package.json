@@ -9,10 +9,11 @@
     "lint": "eslint ./src --ext ts,tsx",
     "lint:fix": "yarn lint --fix",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "test:w": "yarn test --watch"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "src/**/*": [
       "yarn lint:fix"
     ]
   },
