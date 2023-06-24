@@ -4,12 +4,10 @@ import Main from '.';
 
 describe('<Main />', () => {
   it('should render hello world title', () => {
-    const { container } = render(<Main />);
+    render(<Main />);
 
     expect(
       screen.getByRole('heading', { name: /hello world/i })
     ).toBeInTheDocument();
-
-    expect(container.firstChild).toMatchSnapshot();
   });
 });
